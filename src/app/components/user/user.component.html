@@ -1,0 +1,7 @@
+<div class="userElement" *ngIf="user">
+    <span>
+        USER --> Nome: {{user.name}} - Username: {{user.username}} - Email: {{user.email}} - Phone: {{user.phone}} - Website: {{user.website}}
+    </span>
+    <app-address [addr]="user.address"></app-address> 
+    <app-company [comp]="user.company"></app-company>    
+</div>

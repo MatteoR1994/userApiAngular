@@ -1,0 +1,6 @@
+<div *ngIf="addr">
+    <span>
+        Address ->Street: {{addr.street}} - Suite: {{addr.suite}} - City: {{addr.city}} - Zipcode: {{addr.zipcode}}
+    </span>
+    <app-geo [ge]="addr.geo"></app-geo> 
+</div>
