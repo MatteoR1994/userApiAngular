@@ -1,5 +1,14 @@
-<div *ngIf="comp">
-    <span>
-        Company ->Nome: {{comp.name}} - Phrase: {{comp.catchPhrase}} - Bs: {{comp.bs}}
-    </span>
+<div class="company-container" *ngIf="comp">
+    <div class="company-header-text">
+        Company
+    </div>
+    <div class="comp-data">
+        {{comp.name}}
+    </div>
+    <div class="comp-data">
+        {{comp.catchPhrase}}
+    </div>
+    <div class="comp-data">
+        {{comp.bs}}
+    </div>
 </div>

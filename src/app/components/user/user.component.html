@@ -1,7 +1,50 @@
-<div class="userElement" *ngIf="user">
-    <span>
-        USER --> Nome: {{user.name}} - Username: {{user.username}} - Email: {{user.email}} - Phone: {{user.phone}} - Website: {{user.website}}
-    </span>
-    <app-address [addr]="user.address"></app-address> 
-    <app-company [comp]="user.company"></app-company>    
+<div class="user-card-container" *ngIf="user">
+    <div class="user-main-info">
+        <div class="user-image">
+            <img src="./assets/images/user.png" alt="user icon">
+        </div>
+        <div class="user-name">
+            <span class="name-bold">{{user.name}}</span>
+            <span class="surname-italic">{{user.username}}</span>
+        </div>
+    </div>
+    <div class="user-data">
+        <div class="user-contacts">
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/phone.svg" alt="phone icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{user.phone}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/mail.svg" alt="mail icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{user.email}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/website.svg" alt="website icon">
+                </div>
+                <div class="user-contact-detail">
+                    {{user.website}}
+                </div>
+            </div>
+            <div class="contact-user-div">
+                <div class="icon-contact">
+                    <img class="contact-icon-img" src="./assets/images/address.svg" alt="address icon">
+                </div>
+                <div class="user-contact-detail">
+                    <app-address [addr]="user.address"></app-address> 
+                </div>
+            </div>
+        </div>
+        <div class="user-company">
+            <app-company [comp]="user.company"></app-company>
+        </div>
+    </div>
 </div>
