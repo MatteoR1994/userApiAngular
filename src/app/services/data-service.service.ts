@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Address } from '../model/address';
 import { Company } from '../model/company';
 import { Geo } from '../model/geo';
@@ -11,7 +13,7 @@ export class DataServiceService {
 
   uList: User[] = [];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   // fetchtUsers(): Promise<User[]> {
   //   return fetch('https://jsonplaceholder.typicode.com/users')

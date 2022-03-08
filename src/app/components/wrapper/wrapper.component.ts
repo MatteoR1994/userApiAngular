@@ -5,6 +5,7 @@ import { Geo } from 'src/app/model/geo';
 import { User } from 'src/app/model/user';
 import { DataServiceService } from 'src/app/services/data-service.service';
 import { UserComponent } from '../user/user.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-wrapper',
@@ -15,11 +16,13 @@ export class WrapperComponent implements OnInit {
 
   userList: User[] = [];
 
-  constructor(private dataService: DataServiceService) { 
+  constructor(private dataService: DataServiceService, private http: HttpClient) { 
     //this.fetchUserFromApi();
     
     // dataService.fetchtUsers().then(value => console.log(value));
-    this.dataService.fetchtUsers().then(value => this.userList = value);
+    //this.dataService.fetchtUsers().then(value => this.userList = value);
+    
+    this.http.get<User[]>('https://jsonplaceholder.typicode.com/users').subscribe(users => this.userList = users);
   }
 
   ngOnInit(): void {

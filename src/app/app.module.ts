@@ -8,6 +8,7 @@ import { AddressComponent } from './components/address/address.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { GeoComponent } from './components/geo/geo.component';
 import { CompanyComponent } from './components/company/company.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CompanyComponent } from './components/company/company.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
