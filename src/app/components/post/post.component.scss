@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap');
+
 .container {
-    background-color: white;
+    background-color: #EBEBEB;
     display: flex;
     flex-direction: row;
-    padding: 8px;
+    padding: 12px;
     margin: 4px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     justify-content: space-between;
     margin-top: 20px;
     width: 48%;
+    border: 4px solid #1ABFEF;
+    border-radius: 8px;
+    font-family: 'Titillium Web', sans-serif;
   }
   
   .task-name {
