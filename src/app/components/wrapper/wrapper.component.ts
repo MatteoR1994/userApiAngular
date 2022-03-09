@@ -20,7 +20,8 @@ export class WrapperComponent implements OnInit {
     //this.fetchUserFromApi();
     
     // dataService.fetchtUsers().then(value => console.log(value));
-    this.dataService.fetchtUsers().then(value => this.userList = value);
+    // this.dataService.fetchtUsers().then(value => this.userList = value);
+    this.dataService.fetchtUsers().then(resp => resp.json()).then(value => this.userList = value);
     
     // this.http.get<User[]>('https://jsonplaceholder.typicode.com/users').subscribe(users => this.userList = users);
   }
