@@ -10,6 +10,8 @@ import { GeoComponent } from './components/geo/geo.component';
 import { CompanyComponent } from './components/company/company.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SingleUserPageComponent } from './components/single-user-page/single-user-page.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     WrapperComponent,
     GeoComponent,
     CompanyComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SingleUserPageComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

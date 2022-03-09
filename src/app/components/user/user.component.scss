@@ -1,114 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap');
 
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border: 2px solid #DDDD;
+    width: 15%;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center;
+}
+
 /*
 
 font-family: 'Titillium Web', sans-serif;
 
 */
-
-.userElement {
-    margin-bottom: 20px;
-}
-
-.user-card-container {
-    width: 48%;
-    min-height: 20%;
-    background-color: #EFEFEF;
-    border: 10px solid #1ABFEF;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    font-family: 'Titillium Web', sans-serif;
-}
-
-.user-main-info {
-    min-height: 10%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border-bottom: 2px solid #DDDDDD;
-}
-.user-image {
-    width: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.user-image img {
-    width: 100px;
-}
-.user-name {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.name-bold {
-    font-weight: bold;
-    font-size: 30px;
-    padding-left: 20px;
-}
-.surname-italic {
-    font-style: italic;
-    font-size: 20px;
-}
-
-.user-data {
-    min-height: 10%;
-    display: flex;
-    justify-items: center;
-}
-.user-contacts {
-    width: 30%;
-    border-right: 2px solid #DDDDDD;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.user-company {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-.contact-user-div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-.icon-contact {
-    min-width: 20%;
-}
-.user-contact-detail {
-    min-width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-}
-
-.contact-icon-img {
-    width: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
