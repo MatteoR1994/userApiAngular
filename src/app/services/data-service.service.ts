@@ -15,10 +15,17 @@ export class DataServiceService {
 
   constructor(private http: HttpClient) { }
 
-  fetchtUsers(): Promise<Response> {
-    return fetch('https://jsonplaceholder.typicode.com/users');
+  // 3 - CHIAMATA FATTA CON HTTP_CLIENT_MODULE
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
 
+  // 1 - UTILIZZANDO LA PROPRIETA' DELLE INTEFRACCE, versione generica
+  // fetchtUsers(): Promise<Response> {
+  //   return fetch('https://jsonplaceholder.typicode.com/users');
+  // }
+
+  // 1 - UTILIZZANDO LA PROPRIETA' DELLE INTEFRACCE, versione specifica
   // fetchtUsers(): Promise<User[]> {
   //   return fetch('https://jsonplaceholder.typicode.com/users')
   //       .then((response) => response.json())
@@ -28,6 +35,7 @@ export class DataServiceService {
   //       });
   // }
 
+  // 2 - UTILIZZANDO LE INTEFRACCE COME OGGETTI CLASSE, utilizzando dei metodi propri del servizio
   // fetchtUsers(): Promise<User[]> {
   //   return fetch('https://jsonplaceholder.typicode.com/users')
   //     .then((response) => response.json())

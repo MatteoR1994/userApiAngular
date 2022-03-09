@@ -17,13 +17,17 @@ export class WrapperComponent implements OnInit {
   userList: User[] = [];
 
   constructor(private dataService: DataServiceService, private http: HttpClient) { 
+    // A - Chiamata fetch propria di questo metodo
     //this.fetchUserFromApi();
     
+    // B - Chiamate fetch dentro al servizio
     // dataService.fetchtUsers().then(value => console.log(value));
     // this.dataService.fetchtUsers().then(value => this.userList = value);
-    this.dataService.fetchtUsers().then(resp => resp.json()).then(value => this.userList = value);
+    // this.dataService.fetchtUsers().then(resp => resp.json()).then(value => this.userList = value);
     
-    // this.http.get<User[]>('https://jsonplaceholder.typicode.com/users').subscribe(users => this.userList = users);
+    // C - Chiamate fetch utilizzando HttpClientModule
+    // this.http.get<User[]>('https://jsonplaceholder.typicode.com/users').subscribe(users => this.userList = users); // Propria del componente
+    dataService.getUsers().subscribe(users => this.userList = users); // Dentro al servizio
   }
 
   ngOnInit(): void {
