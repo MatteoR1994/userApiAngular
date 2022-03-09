@@ -27,7 +27,7 @@ export class WrapperComponent implements OnInit {
     
     // C - Chiamate fetch utilizzando HttpClientModule
     // this.http.get<User[]>('https://jsonplaceholder.typicode.com/users').subscribe(users => this.userList = users); // Propria del componente
-    dataService.getUsers().subscribe(users => this.userList = users); // Dentro al servizio
+    this.dataService.getUsers().subscribe(users => this.userList = users); // Dentro al servizio
   }
 
   ngOnInit(): void {
