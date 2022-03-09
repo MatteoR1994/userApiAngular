@@ -1,5 +1,5 @@
 <div class="address-container" *ngIf="addr">
-    <span>{{addr.street}} -{{addr.suite}}</span>
+    <span>{{addr.street}} - {{addr.suite}}</span>
     <span>{{addr.city}}, {{addr.zipcode}}</span>
     <app-geo [ge]="addr.geo"></app-geo> 
 </div>
