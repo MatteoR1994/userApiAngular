@@ -15,22 +15,22 @@ export class DataServiceService {
 
   constructor(private http: HttpClient) { }
 
-  // fetchtUsers(): Promise<User[]> {
-  //   return fetch('https://jsonplaceholder.typicode.com/users')
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         this.uList = data;
-  //         return this.uList;
-  //       });
-  // }
-
   fetchtUsers(): Promise<User[]> {
     return fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((data) => {
-        return this.createUser(data);
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          this.uList = data;
+          return this.uList;
+        });
   }
+
+  // fetchtUsers(): Promise<User[]> {
+  //   return fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       return this.createUser(data);
+  //     });
+  // }
 
   createUser(data: any): User[] {
     const userList: User[] = [];
