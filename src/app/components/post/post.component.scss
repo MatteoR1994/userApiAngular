@@ -14,10 +14,17 @@
     font-family: 'Titillium Web', sans-serif;
   }
   
-  .task-name {
+  .post-name {
     padding: 2px;
     font-size: large;
     font-weight: bold;
+  }
+
+  .separator {
+    width: 100%;
+    border: 2px solid #DDDDDD;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .data-container {
