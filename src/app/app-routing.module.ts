@@ -6,6 +6,7 @@ import { WrapperComponent } from './components/wrapper/wrapper.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/wrapper', pathMatch: 'full' },
+  { path: 'wrapper', component: WrapperComponent },
   { path: 'user/:id', component: SingleUserPageComponent },
   // { path: '**', component: PageNotFoundComponent }
   { path: '**', component: WrapperComponent }
